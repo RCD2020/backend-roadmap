@@ -54,4 +54,16 @@
 
 **Blockchain**: Blockchain is a distributed ledger technology that enables secure, decentralized transactions. It is being used to power a wide range of applications, from cryptocurrency to supply chain management.
 
-**Edge Computing**: Edge computing refers to the process of storage and processing of data at the edge of the network, rather than in centralized data centers. It is expected to enable new use cases and applications, such as real-time analytics and low-latency applications. 
+**Edge Computing**: Edge computing refers to the process of storage and processing of data at the edge of the network, rather than in centralized data centers. It is expected to enable new use cases and applications, such as real-time analytics and low-latency applications.
+
+## 3 Parts of the Internet
+> Notes on [this webpage](https://www.vox.com/2014/6/16/18076282/the-internet)
+
+**The Last Mile**:
+The Last Mile is the largest part of internet infrastructure, and it refers to all the physical infrastructure that connects the users/devices to the web. This includes all the cables that connect homes and towers that connect cellular devices.
+
+**Data Centers**:
+Rooms full of servers that store data and host online apps and content.
+
+**The Backbone**:
+The long distance network - mainly fiber optic cable - that carry data between data centers and the last mile.
