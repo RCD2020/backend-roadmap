@@ -1,6 +1,6 @@
 # How Does the Internet Work
 
-> Notes on [this webpage](https://cs.fyi/guide/how-does-internet-work).
+> Notes on cs.fyi's 2023 article, [How does the Internet Work?](https://cs.fyi/guide/how-does-internet-work)
 
 ## Vocab
 
@@ -57,7 +57,7 @@
 **Edge Computing**: Edge computing refers to the process of storage and processing of data at the edge of the network, rather than in centralized data centers. It is expected to enable new use cases and applications, such as real-time analytics and low-latency applications.
 
 ## 3 Parts of the Internet
-> Notes on [this webpage](https://www.vox.com/2014/6/16/18076282/the-internet)
+> Notes on vox.com's 2015 article by Timothy B. Lee, [The internet, explained](https://www.vox.com/2014/6/16/18076282/the-internet)
 
 **The Last Mile**:
 The Last Mile is the largest part of internet infrastructure, and it refers to all the physical infrastructure that connects the users/devices to the web. This includes all the cables that connect homes and towers that connect cellular devices.
@@ -67,3 +67,28 @@ Rooms full of servers that store data and host online apps and content.
 
 **The Backbone**:
 The long distance network - mainly fiber optic cable - that carry data between data centers and the last mile.
+
+
+# How Does the Internet Work?
+> Notes on Stanford's 2002 article by Rus Shuler, [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
+
+When connecting to the internet through your ISP, you are given a temporary IP Address for the duration of your dial-in session. If you connect through Local Area Network (LAN), then you might have a permanent IP Address or it might obtain a temporary one through a Dynamic Host Configuration Protocol (DHCP). But in any case, your IP Address will be unique.
+
+**Ping**: If you are using Windows or a Unix based operating system (including MacOS) you can `ping` sites from your terminal, and it will tell you how long it took to get a response as well as if you used a Domain Name, it will tell you the IP Address you connected to. Hit **Ctrl+C** to interrupt this operation.
+
+**TCP/IP Stack**: The TCP/IP Stack is what allows us to send information over the internet, but it does so in the following layers:
+
+Protocol Layer                       | Description
+------------------------------------ | -----------
+Application Protocols Layer          | Protocols specific to applications such as WWW, e-mail, FTP, etc.
+Transmissions Control Protocol Layer | TCP directs packets to a specific application on a computer using a port number
+Internet Protocol Layer              | IP directs packets to a specific computer using an IP Address
+Hardware Layer                       | Converts binary packet data to network signals and back (E.g. ethernet network card, modem for phone lines, etc.)
+
+**Trace Route**: You can trace the route your packets travel by running `traceroute {Domain Name or IP}` (`tracert` on Windows) and it will print out all the routes that exchanged your packet.
+
+**Network Service Provider (NSP)**: An NSP is large network that connects other networks together to direct packet traffic. Each one is required to connect to atleast 3 **Network Access Points (NAP)** or **Metropolitan Area Exchanges (MAE)**. An MAE is just a NAP but privately owned. NAPs and MAEs are referred to generally as **Internet Exchange Points (IX)**.
+
+**Routing Tables**: How does a computer find another IP Address? First the computer sends the packet to the router it is connected to. The router then checks its Routing Table, which is a collection of all the IP Addresses it is assigned to keep track of. If it does not contain the target IP, then it sends the pack along its default path to another router, where the same steps are repeated until the default path eventually leads to an NSP, which contains huge routing tables. Once the correct IP is found, then it starts routing down the chain.
+
+**Simple Mail Transfer Protocol**: Protocol for emails
